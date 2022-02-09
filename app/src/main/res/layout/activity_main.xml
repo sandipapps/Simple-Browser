@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <!-- Lets design the layout -->
+    <!-- Create a horizontal LinearLayout to display the EditText and the ENTER Button. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:ems="10"
+            android:maxLines="1"
+            android:hint="Enter Url"
+            android:inputType="textPersonName"
+            android:minHeight="52dp"
+            android:drawableLeft="@drawable/ic_baseline_search_24"/>
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0070c7"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:text="Go" />
+
+    </LinearLayout>
+    <!-- Add a RelativeLayout to contain a ProgressBar and a WebView
+    that fills the rest of the screen. -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webview"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>
